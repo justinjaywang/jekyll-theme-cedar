@@ -1,0 +1,58 @@
+title: Cedar
+timezone: America/New_York
+url: 
+description: > #
+  A Jekyll theme for blogs.
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/:title/"
+    layout: post
+    image: 
+    tags: 
+permalink: pretty
+exclude:
+- Gruntfile.js
+- Gemfile.lock
+- package.json
+- README*
+- node_modules
+- '.gitignore'
+theme: jekyll-theme-cedar
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: |2+
+
+
+
+sass:
+  style: compressed
+repository: justinjaywnag/jekyll-theme-cedar
+google_analytics: 
+show_title: 
+title_image: 
+show_description: true
+date_format: '%b %Y'
+post_sort: 'title'
+description_text: > #
+  A theme for blogs.
+footer_text: > #
+  Running on [Siteleaf](http://www.siteleaf.com)
+nav:
+- title: About
+  url: /about/
+- title: GitHub
+  url: https://github.com/justinjaywang/jekyll-theme-cedar
