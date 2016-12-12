@@ -1,3 +1,15 @@
 ---
 layout: default
 ---
+
+<main class="main container container--narrow">
+  <section class="post-previews">
+    {% assign limit = site.per_page | default: 10 %}
+    {% for post in site.posts limit:limit %}
+      {% include post-preview.html %}
+    {% endfor %}
+  </section>
+  <footer>
+    <a href="/archive/">All posts &rarr;</a>
+  </footer>
+</main>

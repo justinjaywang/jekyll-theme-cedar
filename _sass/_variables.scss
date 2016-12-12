@@ -1,7 +1,12 @@
+// typography
+// ----------
+
+$font-size--small: 0.916667em;
+
 // sizing and spacing
 // ------------------
 
-$v: $line-height--body * 1rem;
+$v: $line-height--main * 1rem;
 
 // grid
 // ----
@@ -15,7 +20,7 @@ $max-width--sm: ($min-width--md - 1);
 $max-width--md: ($min-width--lg - 1);
 $max-width--lg: ($min-width--xl - 1);
 
-$max-width--container--narrow: 37.5rem;
+$max-width--container--narrow: 36rem;
 $max-width--container--wide:   1320px;
 
 $gutter--sm: 4.166667%;

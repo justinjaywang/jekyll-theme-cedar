@@ -2,4 +2,30 @@
 layout: default
 ---
 
-{{ content }}
+<main class="main">
+  <article class="post">
+    <header class="post__header container container--narrow">
+      <h1 class="post__title">{{ page.title | smartify }}</h1>
+      {% if page.date %}
+        {% include post-date.html post=page %}
+      {% endif %}
+    </header>
+    <section class="hero"></section>
+    <section class="longform container container--narrow">
+      {{ content | markdownify }}
+    </section>
+  </article>
+  {% if page.collection == 'posts' %}
+    <footer class="container container--narrow read-next">
+      <ul class="read-next__items">
+        {% if page.previous %}
+          <li><a href="{{ page.previous.url }}">Prev: {{ page.previous.title }}</a></li>
+        {% endif %}
+        {% if page.next %}
+          <li><a href="{{ page.next.url }}">Next: {{ page.next.title }}</a></li>
+        {% endif %}
+        <li><a href="/archive/">All posts &rarr;</a></li>
+      </ul>
+    </footer>
+  {% endif %}
+</main>

@@ -1,0 +1,2 @@
+{% assign post = include.post %}
+<time datetime="{{ post.date | date_to_xmlschema }}" class="color--secondary">{{ post.date | date: site.date_format }}</time>

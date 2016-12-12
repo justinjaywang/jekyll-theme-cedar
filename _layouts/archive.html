@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<main class="main container container--narrow">
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{{ page.title | smartify }}</h1>
+    </header>
+    <ul class="archive-items">
+      {% for post in site.posts %}
+        {% assign month = post.date | date: '%B %Y' %}
+        {% if forloop.first %}<!-- first post -->
+          <h4 class="archive-month color--secondary">{{ month }}</h4>
+        {% else %}
+          {% capture next_month %}{{ post.next.date | date: '%B %Y' }}{% endcapture %}
+          {% if month != next_month %}
+            <h4 class="archive-month color--secondary">{{ month }}</h4>
+          {% endif %}
+        {% endif %}
+        <li class="archive-item">
+          <time class="archive-day color--secondary" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d' }}</time>
+          <a href="{{ post.url }}" class="archive-link">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+</main>

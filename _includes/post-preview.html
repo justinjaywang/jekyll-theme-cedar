@@ -1,0 +1,14 @@
+<article class="post-preview">
+  <header class="post-preview__header">
+    <h2 class="post-preview__title"><a href="{{ post.url }}" class="post-preview__link">{{ post.title | smartify }}</a></h2>
+    {% if post.date %}
+      {% include post-date.html post=post %}
+    {% endif %}
+  </header>
+  <section class="longform">
+    {{ post.excerpt | markdownify }}
+  </section>
+  {% if post.excerpt != post.content %}
+    <a href="{{ post.url }}" class="color--secondary">Read more</a>
+  {% endif %}
+</article>

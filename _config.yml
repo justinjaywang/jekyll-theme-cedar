@@ -45,10 +45,8 @@ google_analytics:
 show_title: 
 title_image: 
 show_description: true
-date_format: '%b %Y'
+date_format: '%-d %B %Y'
 post_sort: 'title'
-description_text: > #
-  A theme for blogs.
 footer_text: > #
   Running on [Siteleaf](http://www.siteleaf.com)
 nav:
