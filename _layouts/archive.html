@@ -19,7 +19,6 @@ layout: default
           {% endif %}
         {% endif %}
         <li class="archive-item">
-          <time class="archive-day color--secondary" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d' }}</time>
           <a href="{{ post.url }}" class="archive-link">{{ post.title }}</a>
         </li>
       {% endfor %}

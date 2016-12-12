@@ -176,6 +176,9 @@ small,
 .post-previews,
 .post {
   margin-top: $v*3;
+  @include max-width($max-width--sm) {
+    margin-top: $v*2;
+  }
 }
 
 // header
@@ -229,7 +232,7 @@ small,
 }
 .post-preview__thumb {
   @include cover;
-  padding-top: 40%; // 5×2 aspect ratio
+  padding-top: 50%; // 2×1 aspect ratio
   margin-bottom: $v;
   &:active {
     @include translate3d(0, 1px, 0);
@@ -241,11 +244,13 @@ small,
 
 .post {
   margin-bottom: $v*4;
+  @include max-width($max-width--sm) {
+    margin-bottom: $v*2;
+  }
 }
 .hero {
   @include cover;
   padding-top: 56.25%; // 16×9 aspect ratio
-  margin-bottom: $v*2;
 }
 .post__title {
   margin-bottom: $v*0.25;
@@ -281,13 +286,6 @@ small,
 // archive
 // -------
 
-.archive-item {
-  display: table;
-}
-.archive-day {
-  display: table-cell;
-  width: 1.75em;
-}
 .archive-item + .archive-month {
   margin-top: $v;
 }
