@@ -47,7 +47,13 @@ a {
   }
 }
 .header__title__link,
-.post-preview__link, {
+.header__nav__link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.post-preview__link {
   text-decoration: none;
 }
 h1 {
@@ -209,12 +215,6 @@ small,
     &:last-of-type {
       margin-right: 0;
     }
-  }
-}
-.header__nav__link {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
   }
 }
 

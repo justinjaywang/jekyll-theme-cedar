@@ -1,2 +1,5 @@
 {% assign post = include.post %}
-<time datetime="{{ post.date | date_to_xmlschema }}" class="color--secondary">{{ post.date | date: site.date_format }}</time>
+{% unless site.show_date == false %}
+  {% assign date_format = site.date_format | default: '%-d %b %Y' %}
+  <time datetime="{{ post.date | date_to_xmlschema }}" class="color--secondary">{{ post.date | date: date_format }}</time>
+{% endunless %}

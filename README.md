@@ -7,13 +7,13 @@ A theme for blogs, for Jekyll and Siteleaf.
 Add the theme's gem to your site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-cypress"
+gem "jekyll-theme-cedar"
 ```
 
 Specify the `theme` in your site's `_config.yml`:
 
 ```yaml
-theme: jekyll-theme-cypress
+theme: jekyll-theme-cedar
 ```
 
 Install:
@@ -24,7 +24,52 @@ $ bundle
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+### Configuration
+
+You can set the following options in your site's `_config.yml`:
+
+Setting | Description | Default
+--- | --- | ---
+`per_page` | Number of posts to display in the home index page | 10
+`show_date` | Boolean to show date | `true`
+`date_format` | Date [format](https://shopify.github.io/liquid/filters/date/) | `"%b %-d, %Y"` (outputs to `Jun 7, 2016`)
+`footer_text` | (Markdown) text to include in the footer; footer will be hidden if not included |
+
+### Custom styles
+
+The theme comes with a stylesheet, `/assets/styles.scss`, where you can edit variables, including font sizes and colors.
+
+### Additional pages
+
+You can create additional pages, like an About page (`about.markdown`), which will be compiled at the URL `/about/`. Pages inherit the `post.html` layout by default.
+
+```
+---
+title: About
+---
+
+This is the body of the page.
+```
+
+### Navigation
+
+You can show navigation page links (both internal and external) in a horizontal list below the title. Add these in `_config.yml`:
+
+```yaml
+nav:
+- title: About
+  url: /about/
+- title: GitHub
+  url: https://github.com/justinjaywang/jekyll-theme-cedar
+```
+
+### Google Analytics
+
+You can enable Google Anaytics in production in your site's `_config.yml` by specifying the tracking code:
+
+```yaml
+google_analytics: UA-XXXXXXXX-X
+```
 
 ## Development
 

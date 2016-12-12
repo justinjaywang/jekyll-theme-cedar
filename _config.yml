@@ -42,11 +42,7 @@ sass:
   style: compressed
 repository: justinjaywnag/jekyll-theme-cedar
 google_analytics: 
-show_title: 
-title_image: 
-show_description: true
 date_format: '%-d %B %Y'
-post_sort: 'title'
 footer_text: > #
   Running on [Siteleaf](http://www.siteleaf.com)
 nav:
