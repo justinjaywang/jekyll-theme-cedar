@@ -3,6 +3,9 @@ layout: default
 ---
 
 <main class="main">
+  {% if page.image %}
+    <section class="hero" style="background-image: url('{{ page.image }}')"></section>
+  {% endif %}
   <article class="post">
     <header class="post__header container container--narrow">
       <h1 class="post__title">{{ page.title | smartify }}</h1>
@@ -10,7 +13,6 @@ layout: default
         {% include post-date.html post=page %}
       {% endif %}
     </header>
-    <section class="hero"></section>
     <section class="longform container container--narrow">
       {{ content | markdownify }}
     </section>

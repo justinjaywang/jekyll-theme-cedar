@@ -1,4 +1,9 @@
 <article class="post-preview">
+  {% if post.image %}
+    <a href="{{ post.url }}">
+      <div class="post-preview__thumb" style="background-image: url('{{ post.image }}')"></div>
+    </a>
+  {% endif %}
   <header class="post-preview__header">
     <h2 class="post-preview__title"><a href="{{ post.url }}" class="post-preview__link">{{ post.title | smartify }}</a></h2>
     {% if post.date %}
