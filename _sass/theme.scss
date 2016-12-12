@@ -186,17 +186,26 @@ small,
   padding-bottom: $v*0.666667;
 }
 .header__title {
-  position: absolute;
+  @include min-width($min-width--nav-break) {
+    position: absolute;
+  }
 }
 .header__nav {
-  text-align: right;
+  @include min-width($min-width--nav-break) {
+    text-align: right;
+  }
 }
 .header__nav__item {
-  display: inline-block;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  &:last-of-type {
-    margin-right: 0;
+  @include min-width($min-width--nav-break) {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 .header__nav__link {
